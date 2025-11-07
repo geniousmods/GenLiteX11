@@ -1,4 +1,4 @@
-# 🚀 GenLiteX11 v1.1 Stable
+# 🚀 GenLiteX11 v1.0 Stable
 
 ![Windows](https://img.shields.io/badge/Windows-10%20%7C%2011-0078D6?style=for-the-badge&logo=windows)
 ![Version](https://img.shields.io/badge/Version-1.1%20Stable-success?style=for-the-badge)
@@ -76,7 +76,7 @@ Desarrollado por **GenOS** | [YouTube](https://www.youtube.com/@GeniousMods)
 
 ### Método 1: Descarga Directa
 ```bash
-# 1. Descarga GenLiteX11_v1.1.bat
+# 1. Descarga GenLiteX11_v1.0.bat
 # 2. Clic derecho → "Ejecutar como administrador"
 ```
 
@@ -84,7 +84,7 @@ Desarrollado por **GenOS** | [YouTube](https://www.youtube.com/@GeniousMods)
 ```bash
 git clone https://github.com/GenOS/GenLiteX11.git
 cd GenLiteX11
-# Clic derecho en GenLiteX11_v1.1.bat → "Ejecutar como administrador"
+# Clic derecho en GenLiteX11_v1.0.bat → "Ejecutar como administrador"
 ```
 
 ### ⚠️ IMPORTANTE
@@ -296,7 +296,7 @@ Nivel 3 = FULL
 ### Estructura de Archivos
 ```
 📁 Carpeta del Script
-├── 📄 GenLiteX11_v1.1.bat (script principal)
+├── 📄 GenLiteX11_v1.0.bat (script principal)
 ├── 📄 README.md (este archivo)
 ├── 📋 GenLiteX11_Log_20250106.txt
 ├── 💾 Registry_Backup_Full_20250106.reg
@@ -314,7 +314,7 @@ Contenido:
   - Errores (si los hay)
   
 Ejemplo:
-  [06/01/2025 14:32:15] ========== INICIANDO GenLiteX11 v1.1 ==========
+  [06/01/2025 14:32:15] ========== INICIANDO GenLiteX11 v1.0 ==========
   [OK] Windows 11 detectado [Build 22621]
   [OK] Hardware detectado: 16GB RAM, SSD
   [OK] Backup registro guardado
@@ -387,7 +387,7 @@ Registry_Backup_Basic_[FECHA].reg
 
 ### ❌ **"ERROR: Ejecuta este script como Administrador"**
 **Solución:**
-1. Clic derecho en `GenLiteX11_v1.1.bat`
+1. Clic derecho en `GenLiteX11_v1.0.bat`
 2. Seleccionar **"Ejecutar como administrador"**
 3. Confirmar UAC (User Account Control)
 
@@ -494,7 +494,7 @@ reg delete "HKCU\Software\Microsoft\OneDrive" /f
 
 ## 📝 Changelog
 
-### **v1.1 Stable** (06/01/2025)
+### **v1.0 Stable** (06/01/2025)
 #### 🐛 Bugs Corregidos
 - ✅ Detección de RAM mejorada (manejo de tokens y espacios)
 - ✅ Detección SSD/HDD más precisa (busca en Model si MediaType falla)
@@ -660,7 +660,7 @@ Si este script te ayudó, considera:
 
 <div align="center">
 
-### 🚀 **GenLiteX11 v1.1 Stable**
+### 🚀 **GenLiteX11 v1.0 Stable**
 **Hecho con ❤️ por GenOS**
 
 [⬆️ Volver arriba](#-genlitex11-v11-stable)
