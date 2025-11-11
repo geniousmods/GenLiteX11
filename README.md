@@ -5,7 +5,7 @@
 ![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)
 ![Status](https://img.shields.io/badge/Status-Active-brightgreen?style=for-the-badge)
 
-**Script de optimización profesional para Windows 10/11** diseñado para mejorar el rendimiento, reducir latencia y liberar recursos del sistema.
+**Script de optimización profesional para Windows 11** diseñado para mejorar el rendimiento, reducir latencia y liberar recursos del sistema.
 
 Desarrollado por **GenOS** | [YouTube](https://www.youtube.com/@GeniousMods)
 
