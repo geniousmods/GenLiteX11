@@ -1,7 +1,7 @@
 # 🚀 GenLiteX11 v1.0 Stable
 
 ![Windows](https://img.shields.io/badge/Windows-10%20%7C%2011-0078D6?style=for-the-badge&logo=windows)
-![Version](https://img.shields.io/badge/Version-1.1%20Stable-success?style=for-the-badge)
+![Version](https://img.shields.io/badge/Version-1.0%20Stable-success?style=for-the-badge)
 ![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)
 ![Status](https://img.shields.io/badge/Status-Active-brightgreen?style=for-the-badge)
 
@@ -76,7 +76,7 @@ Desarrollado por **GenOS** | [YouTube](https://www.youtube.com/@GeniousMods)
 
 ### Método 1: Descarga Directa
 ```bash
-# 1. Descarga GenLiteX11_v1.0.bat
+# 1. Descarga GenLiteX11_v1.0.cmd
 # 2. Clic derecho → "Ejecutar como administrador"
 ```
 
@@ -84,7 +84,7 @@ Desarrollado por **GenOS** | [YouTube](https://www.youtube.com/@GeniousMods)
 ```bash
 git clone https://github.com/GenOS/GenLiteX11.git
 cd GenLiteX11
-# Clic derecho en GenLiteX11_v1.0.bat → "Ejecutar como administrador"
+# Clic derecho en GenLiteX11_v1.0.cmd → "Ejecutar como administrador"
 ```
 
 ### ⚠️ IMPORTANTE
@@ -296,7 +296,7 @@ Nivel 3 = FULL
 ### Estructura de Archivos
 ```
 📁 Carpeta del Script
-├── 📄 GenLiteX11_v1.0.bat (script principal)
+├── 📄 GenLiteX11_v1.0.cmd (script principal)
 ├── 📄 README.md (este archivo)
 ├── 📋 GenLiteX11_Log_20250106.txt
 ├── 💾 Registry_Backup_Full_20250106.reg
@@ -387,7 +387,7 @@ Registry_Backup_Basic_[FECHA].reg
 
 ### ❌ **"ERROR: Ejecuta este script como Administrador"**
 **Solución:**
-1. Clic derecho en `GenLiteX11_v1.0.bat`
+1. Clic derecho en `GenLiteX11_v1.0.cmd`
 2. Seleccionar **"Ejecutar como administrador"**
 3. Confirmar UAC (User Account Control)
 
