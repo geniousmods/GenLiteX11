@@ -103,6 +103,7 @@ echo ================================================
 echo.
 set opcion=
 set /p opcion="Selecciona opcion [1-9]: "
+
 if "!opcion!"=="1" goto full_optimize
 if "!opcion!"=="2" goto gaming_optimize
 if "!opcion!"=="3" goto basic_optimize
@@ -121,12 +122,13 @@ goto menu
 :: ========== OPTIMIZACION COMPLETA ==========
 :full_optimize
 cls
-color 0A
+color 0C
 echo ================================================
 echo  OPTIMIZACION COMPLETA
 echo ================================================
 echo.
-echo [%date% %time%] >>> Iniciando Optimizacion COMPLETA >> "%LOG_FILE%"
+echo [%date% %time%] ^>^>^> Iniciando Optimizacion COMPLETA >> "%LOG_FILE%"
+
 
 :: Backup del registro
 set "BACKUP_REG=%~dp0Registry_Backup_Full_%BACKUP_DATE%.reg"
@@ -205,11 +207,12 @@ echo [OK] SysMain detenido >> "%LOG_FILE%"
 echo [7/21] Desinstalando OneDrive...
 taskkill /f /im OneDrive.exe >nul 2>&1
 if exist "%SystemRoot%\SysWOW64\OneDriveSetup.exe" (
-    start /wait "" "%SystemRoot%\SysWOW64\OneDriveSetup.exe" /uninstall >nul 2>&1
+    "%SystemRoot%\SysWOW64\OneDriveSetup.exe" /uninstall >nul 2>&1
 )
 if exist "%SystemRoot%\System32\OneDriveSetup.exe" (
-    start /wait "" "%SystemRoot%\System32\OneDriveSetup.exe" /uninstall >nul 2>&1
+    "%SystemRoot%\System32\OneDriveSetup.exe" /uninstall >nul 2>&1
 )
+timeout /t 3 /nobreak >nul
 rd /s /q "%UserProfile%\OneDrive" >nul 2>&1
 rd /s /q "%LocalAppData%\Microsoft\OneDrive" >nul 2>&1
 rd /s /q "%ProgramData%\Microsoft OneDrive" >nul 2>&1
@@ -381,11 +384,11 @@ if exist "C:\Windows\Temp" (
 echo [OK] Limpieza de temporales completada >> "%LOG_FILE%"
 
 echo.
-color 0A
+color 0C
 echo ================================================
 echo  OPTIMIZACION COMPLETA FINALIZADA
 echo ================================================
-echo [%date% %time%] >>> Optimizacion COMPLETA finalizada >> "%LOG_FILE%"
+echo [%date% %time%] ^>^>^> Optimizacion COMPLETA finalizada >> "%LOG_FILE%"
 echo.
 echo [i] Se recomienda reiniciar el sistema para aplicar
 echo     todos los cambios correctamente.
@@ -411,7 +414,7 @@ echo ================================================
 echo  OPTIMIZACION GAMING (Alto Rendimiento)
 echo ================================================
 echo.
-echo [%date% %time%] >>> Iniciando Optimizacion GAMING >> "%LOG_FILE%"
+echo [%date% %time%] ^>^>^> Iniciando Optimizacion GAMING >> "%LOG_FILE%"
 
 set "BACKUP_GAMING=%~dp0Registry_Backup_Gaming_%BACKUP_DATE%.reg"
 echo [0/7] Creando backup de configuracion gaming...
@@ -484,11 +487,11 @@ echo    [OK] Optimizaciones gaming completadas
 echo [OK] SysMain y Prefetch optimizados >> "%LOG_FILE%"
 
 echo.
-color 0A
+color 0D
 echo ================================================
 echo  OPTIMIZACION GAMING COMPLETADA
 echo ================================================
-echo [%date% %time%] >>> Optimizacion GAMING finalizada >> "%LOG_FILE%"
+echo [%date% %time%] ^>^>^> Optimizacion GAMING finalizada >> "%LOG_FILE%"
 echo.
 echo [i] Optimizaciones aplicadas:
 echo     - Plan de energia maximo
@@ -502,12 +505,12 @@ goto menu
 :: ========== OPTIMIZACION BASICA ==========
 :basic_optimize
 cls
-color 0E
+color 0A
 echo ================================================
 echo  OPTIMIZACION BASICA (Segura para Oficina)
 echo ================================================
 echo.
-echo [%date% %time%] >>> Iniciando Optimizacion BASICA >> "%LOG_FILE%"
+echo [%date% %time%] ^>^>^> Iniciando Optimizacion BASICA >> "%LOG_FILE%"
 
 set "BACKUP_BASIC=%~dp0Registry_Backup_Basic_%BACKUP_DATE%.reg"
 echo [0/8] Creando backup minimo...
@@ -588,7 +591,7 @@ color 0A
 echo ================================================
 echo  OPTIMIZACION BASICA COMPLETADA
 echo ================================================
-echo [%date% %time%] >>> Optimizacion BASICA finalizada >> "%LOG_FILE%"
+echo [%date% %time%] ^>^>^> Optimizacion BASICA finalizada >> "%LOG_FILE%"
 echo.
 echo [i] Cambios seguros aplicados (no requiere reinicio)
 echo.
@@ -614,7 +617,7 @@ echo  - 3D Builder, Alarms, Mail, Camera, Office Hub
 echo  - Skype, Groove Music, Maps, Solitaire, Xbox
 echo  - Weather, News, OneNote, People, y mas...
 echo.
-color 0E
+color 0C
 choice /c SN /n /m "ESTAS SEGURO de continuar? [S/N]: "
 if !errorlevel!==2 goto menu
 
@@ -623,9 +626,9 @@ color 0C
 choice /c SN /n /m "ULTIMA CONFIRMACION - Eliminar bloatware? [S/N]: "
 if !errorlevel!==2 goto menu
 
-color 0E
+color 0C
 echo.
-echo [%date% %time%] >>> Iniciando eliminacion de bloatware >> "%LOG_FILE%"
+echo [%date% %time%] ^>^>^> Iniciando eliminacion de bloatware >> "%LOG_FILE%"
 echo.
 echo Desinstalando apps innecesarias...
 echo (Esto puede tomar varios minutos)
@@ -670,9 +673,9 @@ for %%A in (
 )
 
 echo.
-color 0A
+color 0C
 echo [OK] Bloatware eliminado
-echo [%date% %time%] >>> Bloatware eliminado >> "%LOG_FILE%"
+echo [%date% %time%] ^>^>^> Bloatware eliminado >> "%LOG_FILE%"
 echo.
 echo ================================================
 echo  DESINSTALACION COMPLETADA
@@ -687,12 +690,12 @@ goto menu
 :: ========== LIMPIEZA DE DISCO ==========
 :disk_cleanup
 cls
-color 0B
+color 09
 echo ================================================
 echo  LIMPIEZA DE DISCO
 echo ================================================
 echo.
-echo [%date% %time%] >>> Iniciando limpieza de disco >> "%LOG_FILE%"
+echo [%date% %time%] ^>^>^> Iniciando limpieza de disco >> "%LOG_FILE%"
 echo.
 
 echo Analizando espacio a liberar...
@@ -766,11 +769,11 @@ echo    [OK] Disk Cleanup completado
 echo [OK] Disk Cleanup ejecutado >> "%LOG_FILE%"
 
 echo.
-color 0A
+color 09
 echo ================================================
 echo  LIMPIEZA DE DISCO COMPLETADA
 echo ================================================
-echo [%date% %time%] >>> Limpieza finalizada >> "%LOG_FILE%"
+echo [%date% %time%] ^>^>^> Limpieza finalizada >> "%LOG_FILE%"
 echo.
 echo [i] Espacio liberado: ~!TOTAL_MB! MB + limpieza manual
 echo.
@@ -785,7 +788,7 @@ echo ================================================
 echo  RESTAURAR REGISTRO DESDE BACKUP
 echo ================================================
 echo.
-echo [%date% %time%] >>> Iniciando restauracion de registro >> "%LOG_FILE%"
+echo [%date% %time%] ^>^>^> Iniciando restauracion de registro >> "%LOG_FILE%"
 echo.
 
 echo Buscando backups disponibles...
@@ -850,7 +853,7 @@ echo  - Mal funcionamiento de servicios
 echo ================================================
 echo.
 
-color 0E
+color 0C
 echo Que backup deseas restaurar?
 echo [1] Backup COMPLETO (revierte todas las optimizaciones)
 echo [2] Backup GAMING (solo configuraciones gaming)
@@ -977,7 +980,7 @@ if !RESTORE_CHOICE!==3 (
 :: ========== VER LOG ==========
 :view_log
 cls
-color 0B
+color 0F
 echo ================================================
 echo  REGISTRO DE ACTIVIDADES (LOG)
 echo ================================================
